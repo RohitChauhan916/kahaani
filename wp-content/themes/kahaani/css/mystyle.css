@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+.background {
+		position: absolute; top: 0%; left: 0%; 
+		width: 100%; height: auto;
+		z-index: 1;
+		font-family: Courier;
+	}
+	
+	.cloud {
+		position: absolute;
+    top: 19%;
+    left: 0;
+    width: 90%;
+    height: 50%;
+    z-index: 2;
+    opacity: 0.5;
+	}
+
+	
+	.header-banner {
+		position: fixed; top: 0; left: 0;
+		width: 100%; height: auto;
+		padding: 12px 0;
+		text-align: center;
+		z-index: 100;
+		color: #fff;
+	}
+	
+
+	<!--header.css-->
+	
