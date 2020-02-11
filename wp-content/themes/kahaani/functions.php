@@ -28,4 +28,9 @@
     }
 
     add_action('wp_enqueue_scripts', 'kahaaniZidki');
+
+    function featured_image() {
+        add_theme_support('post-thumbnails');
+    }
+    add_action('after_setup_theme', 'featured_image');
 ?>

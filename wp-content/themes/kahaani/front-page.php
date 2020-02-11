@@ -742,7 +742,7 @@
           <div class="col-sm-3 col-xs-12 text-center">
               <div class="single_brand">
                   <figure>
-                      <img src="imgs/partners/1.jpg" alt="aipl">
+                      <img src="<?php echo get_theme_file_uri('img/partners/1.jpg')?>" alt="aipl">
                       <div class="brand_hover">
                           <div class="icon2">
                               <a href="http://ajitindustries.com/" target="_blank"><i class="ion-link"></i></a>
@@ -755,7 +755,7 @@
           <div class="col-sm-3 col-xs-12 text-center">
               <div class="single_brand">
                   <figure>
-                      <img src="imgs/partners/2.jpg" alt="soch india">
+                      <img src="<?php echo get_theme_file_uri('img/partners/2.jpg')?>" alt="soch india">
                       <div class="brand_hover">
                           <div class="icon2">
                               <a href="#"><i class="ion-link"></i></a>
@@ -768,7 +768,7 @@
           <div class="col-sm-3 col-xs-12 text-center">
               <div class="single_brand">
                   <figure>
-                      <img src="imgs/partners/3.jpg" alt="aiplbrandbuzz">
+                      <img src="<?php echo get_theme_file_uri('img/partners/3.jpg')?>" alt="aiplbrandbuzz">
                       <div class="brand_hover">
                           <div class="icon2">
                               <a href="http://aiplbrandbuzz.com" target="_blank"><i class="ion-link"></i></a>
@@ -781,7 +781,7 @@
           <div class="col-sm-3 col-xs-12 text-center">
               <div class="single_brand">
                   <figure>
-                      <img src="imgs/partners/4.jpg" alt="merakii">
+                      <img src="<?php echo get_theme_file_uri('img/partners/4.jpg')?>" alt="merakii">
                       <div class="brand_hover">
                           <div class="icon2">
                               <a href="http://www.merakii.in/" target="_blank"><i class="ion-link"></i></a>
@@ -794,7 +794,7 @@
           <div class="col-sm-3 col-xs-12 text-center">
               <div class="single_brand">
                   <figure>
-                      <img src="imgs/partners/5.jpg" alt="aiplbrandbuzz">
+                      <img src="<?php echo get_theme_file_uri('img/partners/5.jpg')?>" alt="aiplbrandbuzz">
                       <div class="brand_hover">
                           <div class="icon2">
                               <a href="http://www.aiplabro.com" target="_blank"><i class="ion-link"></i></a>
@@ -807,7 +807,7 @@
           <div class="col-sm-3 col-xs-12 text-center">
               <div class="single_brand">
                   <figure>
-                      <img src="imgs/partners/6.jpg" alt="merakii">
+                      <img src="<?php echo get_theme_file_uri('img/partners/6.jpg')?>" alt="merakii">
                       <div class="brand_hover">
                           <div class="icon2">
                               <a href="http://www.aiplzorro.com" target="_blank"><i class="ion-link"></i></a>
@@ -830,7 +830,7 @@
           <div class="col-sm-3 col-xs-12 text-center">
               <div class="single_brand">
                   <figure>
-                      <img src="imgs/partners/7.jpg" alt="aipl">
+                      <img src="<?php echo get_theme_file_uri('img/partners/7.jpg')?>" alt="aipl">
                       <div class="brand_hover">
                           <div class="icon2">
                               <a href="http://ajitindustries.com/" target="_blank"><i class="ion-link"></i></a>
