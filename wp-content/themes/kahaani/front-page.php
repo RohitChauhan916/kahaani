@@ -458,6 +458,11 @@
 <div class="container">
 
  <div class="row">
+ 
+<?php 
+    while(have_posts()){
+        the_post();
+?>
 
 <div class="col-md-4 col-sm-6">
 
@@ -465,21 +470,21 @@
 
           <div class="post-img">
 
-    <a href="sassan-sony.html"><img src="imgs/stories/33.jpg" alt="Kahaani zidd ki-SASSAN SONY SOHRAB"> </a>
+    <a href="<?php the_permalink();?>"><?php the_post_thumbnail();?></a>
 
   </div>
 
   <div class="blog_content">
 
-  <a href="sassan-sony.html" class="tittle-post">
+  <a href="<?php the_permalink();?>" class="tittle-post">
 
-         SASSAN SONY SOHRAB 
+         <?php the_title();?>
 
   </a>						
 
   <h4>Ek Zidd Kuch Kar Dikhane Ki</h4>
 
-              <p>The most beautiful people I’ve known are those who have known trials, have known struggles....</p>
+              <p><?php the_content(); ?></p>
 
   <a href="sassan-sony.html" class="read_more">READMORE</a>		
 
@@ -487,228 +492,10 @@
 
   </article>			
 
-      <article class="blog-post t" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"> 
-
-          <div class="post-img">
-
-    <a href="dinesh.html"><img src="imgs/stories/34.jpg" alt="Kahaani zidd ki-dinesh"> </a>
-
-  </div>
-
-  <div class="blog_content">
-
-  <a href="dinesh.html" class="tittle-post">
-
-     DINESH KUMAR SAIN
-
-  </a>						
-
-  <h4>Ek Zidd Jo Hosolo Ko Jhukne Na De</h4>
-
-              <p>Most people spend their whole life without knowing what they are meant to do..</p>
-
-  <a href="dinesh.html" class="read_more">READMORE</a>		
-
-  </div>
-
-  </article>	
-
-      <article class="blog-post t" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"> 
-
-          <div class="post-img">
-
-    <a href="vijay.html"><img src="imgs/stories/28.jpg" alt="Kahaani zidd ki-Vijay Upase"> </a>
-
-  </div>
-
-  <div class="blog_content">
-
-  <a href="vijay.html" class="tittle-post">
-
-     VIJAY UPASE
-
-  </a>						
-
-  <h4>एक ज़िद्द अपने किसानो भाइयों के परिवार के लिए कुछ कर दिखाने की । </h4>
-
-              <p>कई दशक आते हैं तो कई दशक जाते हैं परंतु जो रह जाते हैं वह है महान समाज सुधारकों के महान  ...</p>
-
-  <a href="vijay.html" class="read_more">READMORE</a>		
-
-  </div>
-
-  </article>
-
 </div>
-
-<div class="col-md-4 col-sm-6">
-
-      <article class="blog-post" data-aos="fade-up" data-aos-duration="1000">
-                  <div class="post-img">
-
-    <a href="ramesh.html"><img src="imgs/stories/32.jpg" alt="Kahaani zidd ki-Ramesh"> </a>
-
-  </div>
-
-  <div class="blog_content">
-
-  <a href="ramesh.html" class="tittle-post">
-
-     RAMESH KUMAR PALIWAL
-
-  </a>						
-
-  <h4>A humble effort to bring the good life to the orphans</h4>
-
-              <p>It’s an organization working for vulnerable children to ensure their basic rights..</p>
-
-  <a href="ramesh.html" class="read_more">READMORE</a>		
-
-  </div>
-              </article>
-
-      <article class="blog-post t" data-aos="fade-up" data-aos-duration="1000"> 
-
-          <div class="post-img">
-
-    <a href="sandeep.html"><img src="imgs/stories/30.jpg" alt="Kahaani zidd ki-sandeep"> </a>
-
-  </div>
-
-  <div class="blog_content">
-
-  <a href="sandeep.html" class="tittle-post">
-
-     SANDEEP GUPTA
-
-  </a>						
-
-  <h4>Ek Zidd Logo Ki Zindagi Bachane Ki</h4>
-
-              <p>Road accidents are undoubtedly the most frequent and, overall, the cause of ...</p>
-
-  <a href="sandeep.html" class="read_more">READMORE</a>		
-
-  </div>
-
-  </article>	
-
-      <article class="blog-post t" data-aos="fade-up" data-aos-duration="1000"> 
-
-          <div class="post-img">
-
-    <a href="ishwari.html"><img src="imgs/stories/36.jpg" alt="Kahaani zidd ki-ishwari"> </a>
-
-  </div>
-
-  <div class="blog_content">
-
-  <a href="ishwari.html" class="tittle-post">
-
-     ISHWARI BHOI
-
-  </a>						
-
-  <h4>एक ज़िद्द पर्यावरण को बचाने की । </h4>
-
-              <p>एक विद्यार्थी के जीवन में शिक्षक एक ऐसा महत्वपूर्ण इंसान होता है जो अपने ज्ञान, धैर्य, प्यार ...</p>
-
-  <a href="ishwari.html" class="read_more">READMORE</a>		
-
-  </div>
-
-  </article>	
-
-</div>
-
-<div class="col-md-4 col-sm-6">
-
-  <article class="blog-post t" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"> 
-
-         <iframe width="360" height="315" src="https://www.youtube.com/embed/kKLBgE-5QtM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-  </article>	
-
-      <article class="blog-post t" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"> 
-
-          <div class="post-img">
-
-    <a href="kriti.html"><img src="imgs/stories/29.jpg" alt="Kahaani zidd ki-kriti"> </a>
-
-  </div>
-
-  <div class="blog_content">
-
-  <a href="kriti.html" class="tittle-post">
-
-     DR. KRITI
-
-  </a>						
-
-  <h4>Shikshit Smaaj Bnane Ki Ek Zidd Ko Salaam</h4>
-
-              <p>Your life from birth to death is quite literally an unbroken chain of ever-increasing, unavoidable ...</p>
-
-  <a href="kriti.html" class="read_more">READMORE</a>		
-
-  </div>
-
-  </article>			
-
-      <article class="blog-post t"  data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"> 
-
-          <div class="post-img">
-
-    <a href="santwana.html"><img src="imgs/stories/35.jpg" alt="Kahaani zidd ki-santwana"> </a>
-
-  </div>
-
-  <div class="blog_content">
-
-  <a href="santwana.html" class="tittle-post">
-
-     CA SANTWANA ARAS
-
-  </a>						
-
-  <h4>Apni Kamiyo Ko Takat Banane Ki Zidd Ko Salaam</h4>
-
-              <p>Despite the many challenges, differently abled people are turning themselves into ...</p>
-
-  <a href="santwana.html" class="read_more">READMORE</a>		
-
-  </div>
-
-  </article>
-
-      <article class="blog-post t" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"> 
-
-          <div class="post-img">
-
-    <a href="hukum.html"><img src="imgs/stories/31.jpg" alt="Kahaani zidd ki-Hukum"></a> 
-
-  </div>
-
-  <div class="blog_content">
-
-  <a href="hukum.html" class="tittle-post">
-
-     HUKUM CHAND CHAUDHARY
-
-  </a>						
-
-  <h4>Zidd Apne Desh Ke Baccho Ke Liye Kuch Kar Jaane Ki</h4>
-
-              <p>Innovating something useful has a deep thought behind it and it takes a lot  ...</p>
-
-  <a href="hukum.html" class="read_more">READMORE</a>		
-
-  </div>
-
-  </article>
-
-</div>
-
+<?php 
+    }
+?>
 </div> 
 
  <div class="title_style">
