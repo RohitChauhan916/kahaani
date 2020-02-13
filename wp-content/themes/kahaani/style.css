@@ -3292,9 +3292,12 @@ label[for="login_check"]{
 /* my css*/
 
 .featured_categories {
-    padding-bottom:50px;
+    padding-bottom:100px;
 }
-
+.paginatoin-area a{
+    border: 1px solid black;
+    padding: 20px;
+  }
 .pb-30 {
     padding-bottom:30px;
 }
@@ -3408,6 +3411,8 @@ label[for="login_check"]{
                 margin-bottom: 30px;
                 border-radius: 10px;
                 overflow: hidden;
+                height: 100% !important;
+                min-height: 600px !important;
             }
 
             #blog_section img {

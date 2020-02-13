@@ -460,15 +460,27 @@
  <div class="row">
  
 <?php 
-    while(have_posts()){
-        the_post();
+    $homepageStories = new Wp_Query(array(
+        'posts_per_page' => 10,
+        'post_type' => 'post',
+        'tax_query' => array(
+            'relation'   => 'AND',
+            array(
+                'taxonomy' => 'category',
+                'field'    => 'slug',
+                'terms'    => array('Top'),
+            ),
+        ),
+    ));
+    while($homepageStories->have_posts()){
+        $homepageStories->the_post();
 ?>
 
 <div class="col-md-4 col-sm-6">
 
   <article class="blog-post t" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"> 
 
-          <div class="post-img">
+          <div class="post-img black_white">
 
     <a href="<?php the_permalink();?>"><?php the_post_thumbnail();?></a>
 
@@ -478,15 +490,15 @@
 
   <a href="<?php the_permalink();?>" class="tittle-post">
 
-         <?php the_title();?>
+  <?php the_field('story_teller'); ?>
 
   </a>						
 
-  <h4>Ek Zidd Kuch Kar Dikhane Ki</h4>
+  <h4><?php the_title();?></h4>
 
-              <p><?php the_content(); ?></p>
+              <p><?php echo wp_trim_words(get_the_content(), 30) ?></p>
 
-  <a href="sassan-sony.html" class="read_more">READMORE</a>		
+  <a href="<?php the_permalink();?>" class="read_more">READMORE</a>		
 
   </div>
 

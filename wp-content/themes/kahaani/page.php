@@ -14,10 +14,11 @@ while(have_posts()){
                     <div class="supplier_country">
                         <div class="country">
                             <ul>
-                                <li><a href="index.html">Home</a>
-                                    <i class="ion-ios-arrow-forward"></i>
-                                </li>
-                                <li><a href="#"></a></li>
+                                <li><a href="index.html"><?php
+if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+}
+?></a>
                             </ul>
                         </div>
                     </div>

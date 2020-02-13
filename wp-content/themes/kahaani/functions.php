@@ -33,4 +33,52 @@
         add_theme_support('post-thumbnails');
     }
     add_action('after_setup_theme', 'featured_image');
+
+    function kahaani_features(){
+        add_theme_support('title-tag');
+        register_nav_menu('headerMenuLocation', 'Header Menu Location');
+    }
+    add_action('after_setup_theme', 'kahaani_features');
+
+
+    function filter_post_asb() {
+
+        ob_start();
+    
+        $args = array(
+           'cat' => 43,
+           'year' => $_POST['year']
+        );
+        $query = new WP_Query($args);
+    
+        if ( $query -> have_posts()) : ?>
+        <div class="container">
+        <select id="year"></select>
+        <ul class="slides">
+            <?php while($query -> have_posts()) : $query -> the_post(); ?>
+            <li>
+                <img src="<?php bloginfo('template_url')?>/images/logo.png" >
+                <?php the_content(); ?>
+                <h2><?php the_permalink();?></h2>
+                <h4><?php the_title();?></h4>
+            </li>
+            <li>
+                <?php the_post_thumbnail();?>
+            </li>
+            <?php endwhile ; ?>
+            <?php wp_reset_postdata();?>
+        </ul>
+       </div>
+       <?php
+       endif;
+       echo ob_get_clean();
+    
+       // OR
+       // $html = ob_get_clean();
+       // echo json_encode( array( 'html' => $html ) );
+       exit;
+    }
+    
+    add_action('wp_ajax_filter', 'filter_post_asb');
+    add_action('wp_ajax_nopriv_filter', 'filter_post_asb');
 ?>

@@ -14,7 +14,11 @@ while(have_posts())
             <div class="row">
                 <div class="col-md-12">
                     <div class="supplier_country">
-                        <h2 class="blog_name">AUTHOR SHERRY</h2>
+                        <p class="blog_name"><?php
+if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+}
+?></p>
                         <!--<h4>Effort means the end of failure</h4>-->
                     </div>
                 </div>
@@ -38,7 +42,7 @@ while(have_posts())
                                                 <i class="ion-ios-calendar-outline"></i>
                                             </div>
                                             <div class="info_desc">
-                                                <p>13th Dec 18</p>
+                                                <p><?php the_time('F j.Y');?></p>
                                             </div>
                                         </li>
                                         <li>
@@ -46,7 +50,7 @@ while(have_posts())
                                                 <i class="ion-ios-person-outline"></i>
                                             </div>
                                             <div class="info_desc">
-                                                <p>By Author Sherry</p>
+                                                <p><?php the_field('story_teller'); ?></p>
                                             </div>
                                         </li>
                                     </ul>
@@ -81,6 +85,49 @@ while(have_posts())
             </div>
         </div>
     </section>
+        <!-- Start Featured Categories area  -->
+        <section class="featured_categories">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title_style">
+                        <h1>More Stories</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <?php 
+                    $relatedProperties = new WP_Query(array(
+                        'posts_per_page' => 3,
+                        'post_type' => 'post',
+                        'orderby'   =>'rand',
+                    ));
+                    while($relatedProperties->have_posts()){
+                        $relatedProperties->the_post()
+                ?>
+                    <div class="col-sm-4 col-xs-12 pb-30">
+                        <figure class="single_category">
+                            <div class="black_white">
+                            <?php the_post_thumbnail();?>
+                    </div>
+                            <figcaption class="category_hover">
+                                <div class="category_info">
+                                    <a href="<?php the_permalink();?>">
+                                        <h3><?php the_field('story_teller'); ?></h3>
+                                        <div class="category_desc">
+                                            <p><?php the_title();?></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
 <?php
 } 
 get_footer();

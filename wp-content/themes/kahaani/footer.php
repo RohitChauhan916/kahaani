@@ -145,11 +145,29 @@
         <div class="footer_bottom">
             <div class="container">
                 <div class="copyright">
-                    <p data-hover="Copyright © 2018, Design  by AiplBrandbuzz">Copyright © 2018, Design  by AiplBrandbuzz</p>
+                    <p data-hover="Copyright © 2018, Design  by AiplBrandbuzz">Copyright © 2018, Design  by <a href="aiplbrandbuzz.com/">AiplBrandbuzz</a></p>
                 </div>
             </div>
         </div>
     </footer>
+    <script>
+  $.ajax({
+    url : filter.attr('action') ,
+    data : filter.serialize() ,
+    type : filter.attr('method') ,
+    success : function (response)
+    {
+        console.log(response)
+    },
+    error : function (request , status , error)
+    {
+        console.log(request.responseText)
+        console.log(error)
+    }
+}).done(function () {
+    console.log('ajax completed')
+})
+    </script>
 <?php wp_footer(); ?>
 <script>
 

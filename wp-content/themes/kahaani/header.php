@@ -9,11 +9,12 @@
      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
      <?php wp_head(); ?>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
 </head>
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5251538.js"></script>
 <!-- End of HubSpot Embed Code -->
-<body>
+<body <?php body_class();  ?>>
 <!--   Start Main Slider area  -->
 <header class="navbar-fixed-top clearHeader">
 
@@ -27,19 +28,15 @@
 <span class="icon-bar"></span>                        
 </button>
 
-<a class="navbar-brand" href="#"><img src="<?php echo get_theme_file_uri('img/logo.png')?>" type="image/jpg"></a>
+<a class="navbar-brand" href="<?php echo site_url();?>"><img src="<?php echo get_theme_file_uri('img/logo.png')?>" type="image/jpg"></a>
 
 </div>
 
 <div class="collapse navbar-collapse" id="myNavbar">
-
-<ul class="nav navbar-nav">
-<li class="active"><a href="index.html">Home</a></li>
-<li><a href="about_us.html">About Us</a></li>
-<li><a href="stories.html">Stories</a></li>
-<li><a href="news.html">News</a></li>
-<li><a href="contact.html">Contact Us</a></li>
-</ul>
+<?php wp_nav_menu(array(
+    'theme_location' => 'headerMenuLocation',
+    'menu_class' => 'nav navbar-nav' 
+));?>
 </div>
 
 </div>
