@@ -14,11 +14,11 @@ while(have_posts()){
                     <div class="supplier_country">
                         <div class="country">
                             <ul>
-                                <li><a href="index.html"><?php
+                               <li><?php
 if ( function_exists('yoast_breadcrumb') ) {
   yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 }
-?></a>
+?></li>
                             </ul>
                         </div>
                     </div>

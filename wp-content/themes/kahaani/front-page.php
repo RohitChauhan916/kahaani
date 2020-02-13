@@ -744,41 +744,7 @@
 
                   <div class="consultation">
 
-                      <form action="homeController.php" method="post">						<script language="javascript">                    function ValidateEmail(email) { var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/; return expr.test(email); }; function validateForm() { var name = $("#name").val(); if (name == "") { alert("Please Enter name"); return false; } if (!ValidateEmail($("#email").val())) { alert("Please Enter Valid  Email"); return false; } var message = $("#message").val(); if (message == "") { alert("Please Enter Message"); return false; } return true; }		           </script>
-
-      <div class="col-md-12">
-
-        <div class="form-group">
-
-          <input class="form-control" name="name" id="name" placeholder="Name" type="text" required>
-
-                      </div>
-
-                      <div class="form-group">    
-
-                          <input class="form-control" name="email" id="email" placeholder="Email" type="text" required>
-
-                      </div>
-
-        <div class="form-group">
-
-          <textarea id="message" name="message" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
-
-        </div>
-
-      </div>
-
-      <div class="col-md-12">
-
-        <div class="form-group">
-
-        <input value="Submit" name="submit" class="btn btn-primary" type="submit" onclick="return validateForm();">
-
-        </div>
-
-      </div>
-
-              </form> 
+                  <?php echo do_shortcode( '[cf7form cf7key="untitled"]' )?>
 
                   </div>
 
