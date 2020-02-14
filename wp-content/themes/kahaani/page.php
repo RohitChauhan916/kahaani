@@ -7,7 +7,7 @@ while(have_posts()){
     <section class="breadcrumb">
         <div class="container">
             <div class="supplier_title">
-                <h1 class="sup_title" data-in-effect="flipInY" data-out-effect="flipOutY"><?php the_title();?></h1>
+                <h1 class="sup_title" data-in-effect="flipInY" data-out-effect="flipOutY"></h1>
             </div>
             <div class="row">
                 <div class="col-md-12">

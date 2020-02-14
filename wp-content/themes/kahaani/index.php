@@ -2,22 +2,7 @@
 get_header();
 
 ?>
-<section class="breadcrumb">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="supplier_country">
-                        <p class="blog_name"><?php
-if ( function_exists('yoast_breadcrumb') ) {
-  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-}
-?></p>
-                        <!--<h4>Effort means the end of failure</h4>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="row">
 <div class="container">
 <form class="navbar-form">
 <div class="form-group">
@@ -27,6 +12,7 @@ if ( function_exists('yoast_breadcrumb') ) {
 </div>
 </select>
 </form>
+</div>
 </div>
     <section class="featured_categories" id="blog_section">
         <div class="container">

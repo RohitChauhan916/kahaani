@@ -14,6 +14,17 @@ a,a:hover,a:focus{
 	text-decoration: none;
     outline: none;
 }
+.archive form{
+    margin-top: 60px !important;
+  }
+  .archive form select{
+   width: 100% !important;
+  padding: 0 50px 0 20px !important;
+  height: 44px !important;
+  line-height: 44px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 5px !important;
+  }
 /*------Maximum Image Width--------*/
 img{
     max-width: 100%;
