@@ -73,6 +73,22 @@ else :
 			<input id="user-submitted-custom" name="<?php echo esc_attr($usp_custom_name); ?>" type="text" value="" placeholder="<?php echo esc_attr($usp_custom_label); ?>"<?php if (usp_check_required('custom_field')) echo $usp_required; ?> class="usp-input form-control">
 			</div>
 		</fieldset>
+		<?php } if ($usp_options['custom_field'] == 'show' || $usp_options['custom_field'] == 'optn') { ?>
+		
+		<fieldset class="usp-custom">
+			<label for="user-submitted-custom"><?php echo esc_html($usp_custom_label_city); ?></label>
+			<div class="form-group">
+			<input id="user-submitted-custom" name="<?php echo esc_attr($usp_custom_city); ?>" type="text" value="" placeholder="<?php echo esc_attr($usp_custom_label); ?>"<?php if (usp_check_required('custom_field')) echo $usp_required; ?> class="usp-input form-control">
+			</div>
+		</fieldset>
+		<?php } if ($usp_options['custom_field'] == 'show' || $usp_options['custom_field'] == 'optn') { ?>
+		
+		<fieldset class="usp-custom">
+			<label for="user-submitted-custom"><?php echo esc_html($usp_custom_label); ?></label>
+			<div class="form-group">
+			<input id="user-submitted-custom" name="<?php echo esc_attr($usp_custom_state); ?>" type="text" value="" placeholder="<?php echo esc_attr($usp_custom_label); ?>"<?php if (usp_check_required('custom_field')) echo $usp_required; ?> class="usp-input form-control">
+			</div>
+		</fieldset>
 		<?php } if ($usp_options['usp_captcha'] == 'show') { ?>
 		
 		<fieldset class="usp-captcha">
