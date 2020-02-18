@@ -791,13 +791,9 @@ function usp_add_defaults() {
 			'usp_post_type'        => 'post',
 			'custom_field'         => 'hide',
 			'custom_name'          => 'usp_custom_field',
-			'custom_city'          => 'usp_custom_field',
-			'custom_state'          => 'usp_custom_field',
 			'custom_label'         => esc_html__('Custom Field', 'usp'),
-			'custom_label_city'         => esc_html__('Custom Field', 'usp'),
-			'custom_label_state'         => esc_html__('Custom Field', 'usp'),
 			'auto_display_custom'  => 'disable',
-			'auto_custom_markup'   => '<p>%%custom_label%% : %%custom_label_city%% : %%custom_label_state%% : %%custom_name%% : %%custom_city%% : %%custom_state%% : %%custom_value%%</p>',
+			'auto_custom_markup'   => '<p>%%custom_label%% : %%custom_name%% : %%custom_value%%</p>',
 			'custom_checkbox'      => false,
 			'custom_checkbox_name' => 'usp_custom_checkbox',
 			'custom_checkbox_text' => 'I agree the to the terms.',
@@ -904,11 +900,7 @@ function usp_validate_options($input) {
 	if (isset($input['usp_recaptcha']))        $input['usp_recaptcha']        = wp_filter_nohtml_kses($input['usp_recaptcha']);        else $input['usp_recaptcha']        = null;
 	if (isset($input['custom_field']))         $input['custom_field']         = wp_filter_nohtml_kses($input['custom_field']);         else $input['custom_field']         = null;
 	if (isset($input['custom_name']))          $input['custom_name']          = wp_filter_nohtml_kses($input['custom_name']);          else $input['custom_name']          = null;
-	if (isset($input['custom_city']))          $input['custom_city']          = wp_filter_nohtml_kses($input['custom_city']);          else $input['custom_city']          = null;
-	if (isset($input['custom_state']))          $input['custom_state']          = wp_filter_nohtml_kses($input['custom_state']);          else $input['custom_state']          = null;
 	if (isset($input['custom_label']))         $input['custom_label']         = wp_filter_nohtml_kses($input['custom_label']);         else $input['custom_label']         = null;
-	if (isset($input['custom_label_city']))         $input['custom_label_city']         = wp_filter_nohtml_kses($input['custom_label_city']);         else $input['custom_label_city']         = null;
-	if (isset($input['custom_label_state']))         $input['custom_label_state']         = wp_filter_nohtml_kses($input['custom_label_state']);         else $input['custom_label_state']         = null;
 	if (isset($input['custom_checkbox_name'])) $input['custom_checkbox_name'] = wp_filter_nohtml_kses($input['custom_checkbox_name']); else $input['custom_checkbox_name'] = null;
 	if (isset($input['custom_checkbox_err']))  $input['custom_checkbox_err']  = wp_filter_nohtml_kses($input['custom_checkbox_err']);  else $input['custom_checkbox_err']  = null;
 	
@@ -1366,30 +1358,6 @@ function usp_render_form() {
 										<div class="mm-item-caption"><?php esc_html_e('This will be displayed as the field label on the form. Default: Custom Field', 'usp'); ?></div></td>
 									</tr>
 								</table>
-								<table class="widefat mm-table">
-									<tr>
-										<th scope="row"><label class="description" for="usp_options[custom_city]"><?php esc_html_e('Custom Field Name', 'usp'); ?></label></th>
-										<td><input type="text" size="45" name="usp_options[custom_city]" value="<?php if (isset($usp_options['custom_city'])) echo esc_attr($usp_options['custom_city']); ?>" />
-										<div class="mm-item-caption"><?php esc_html_e('Use only alphanumeric, underscores, and dashes. If unsure, use the default name:', 'usp'); ?> <code>usp_custom_field</code></div></td>
-									</tr>
-									<tr>
-										<th scope="row"><label class="description" for="usp_options[custom_label_city]"><?php esc_html_e('Custom Field Label', 'usp'); ?></label></th>
-										<td><input type="text" size="45" name="usp_options[custom_label_city]" value="<?php if (isset($usp_options['custom_label_city'])) echo esc_attr($usp_options['custom_label_city']); ?>" />
-										<div class="mm-item-caption"><?php esc_html_e('This will be displayed as the field label on the form. Default: Custom Field', 'usp'); ?></div></td>
-									</tr>
-								</table>
-								<table class="widefat mm-table">
-									<tr>
-										<th scope="row"><label class="description" for="usp_options[custom_state]"><?php esc_html_e('Custom Field Name', 'usp'); ?></label></th>
-										<td><input type="text" size="45" name="usp_options[custom_state]" value="<?php if (isset($usp_options['custom_state'])) echo esc_attr($usp_options['custom_state']); ?>" />
-										<div class="mm-item-caption"><?php esc_html_e('Use only alphanumeric, underscores, and dashes. If unsure, use the default name:', 'usp'); ?> <code>usp_custom_field</code></div></td>
-									</tr>
-									<tr>
-										<th scope="row"><label class="description" for="usp_options[custom_label_state]"><?php esc_html_e('Custom Field Label', 'usp'); ?></label></th>
-										<td><input type="text" size="45" name="usp_options[custom_label_state]" value="<?php if (isset($usp_options['custom_label_state'])) echo esc_attr($usp_options['custom_label_state']); ?>" />
-										<div class="mm-item-caption"><?php esc_html_e('This will be displayed as the field label on the form. Default: Custom Field', 'usp'); ?></div></td>
-									</tr>
-								</table>
 							</div>
 							
 							<h3 id="usp-challenge-question"><?php esc_html_e('Challenge Question', 'usp'); ?></h3>
@@ -1595,7 +1563,7 @@ function usp_render_form() {
 										<th scope="row"><label class="description" for="usp_options[auto_custom_markup]"><?php esc_html_e('Custom Field Markup', 'usp'); ?></label></th>
 										<td><textarea class="textarea" rows="3" cols="50" name="usp_options[auto_custom_markup]"><?php if (isset($usp_options['auto_custom_markup'])) echo esc_textarea($usp_options['auto_custom_markup']); ?></textarea> 
 										<div class="mm-item-caption"><?php esc_html_e('Markup to use for the submitted Custom Field (when auto-display is enabled). Can use', 'usp'); ?> 
-										<code>%%custom_label%%</code>, <code>%%custom_label_city%%</code>, <code>%%custom_label_state%%</code>,<code>%%custom_name%%</code>, <code>%%custom_state%%</code>, <code>%%custom_city%%</code>,<code>%%custom_value%%</code>, <code>%%author%%</code>, <?php esc_html_e('and', 'usp'); ?> <code>%%title%%</code>.</div></td>
+										<code>%%custom_label%%</code>, <code>%%custom_name%%</code>, <code>%%custom_value%%</code>, <code>%%author%%</code>, <?php esc_html_e('and', 'usp'); ?> <code>%%title%%</code>.</div></td>
 									</tr>
 								</table>
 							</div>
