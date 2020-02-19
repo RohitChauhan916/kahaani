@@ -5,6 +5,9 @@
 body{
     font-family: 'Lato', sans-serif !important;
 }
+.post_btn{
+    margin-bottom:100px;
+  }
 ul,ol{
 	list-style-type: none;
 	margin: 0px;
