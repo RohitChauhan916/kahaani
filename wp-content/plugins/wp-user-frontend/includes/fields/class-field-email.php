@@ -42,7 +42,7 @@ class WPUF_Form_Field_Email extends WPUF_Form_Field_Text {
                 <input
                     id="<?php echo esc_attr( $field_settings['name'] ) . '_' . esc_attr( $form_id ); ?>"
                     type="email"
-                    class="email <?php echo ' wpuf_' . esc_attr( $field_settings['name'] ) . '_' . esc_attr( $form_id ); ?>"
+                    class="email form-control<?php echo ' wpuf_' . esc_attr( $field_settings['name'] ) . '_' . esc_attr( $form_id ); ?>"
                     data-duplicate="<?php echo isset( $field_settings['duplicate'] ) ? esc_attr( $field_settings['duplicate'] ) : 'no'; ?>"
                     data-required="<?php echo esc_attr( $field_settings['required'] ); ?>"
                     data-type="email"

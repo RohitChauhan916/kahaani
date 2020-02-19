@@ -27,7 +27,7 @@ class WPUF_Form_Field_Post_Title extends WPUF_Field_Contract {
 
             <div class="wpuf-fields">
                 <input
-                    class="textfield <?php echo esc_attr( 'wpuf_' . $field_settings['name'] . '_' . $form_id ); ?>"
+                    class="textfield form-control <?php echo esc_attr( 'wpuf_' . $field_settings['name'] . '_' . $form_id ); ?>"
                     id="<?php echo esc_attr( $field_settings['name'] . '_' . $form_id ); ?>"
                     type="text"
                     data-duplicate="<?php // echo $field_settings['duplicate'] ? $field_settings['duplicate'] : 'no';?>"
