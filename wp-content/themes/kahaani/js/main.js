@@ -31,9 +31,9 @@
     });
 
     // Mean Menu
-    $(".mobile_menu").meanmenu({
+ /*   $(".mobile_menu").meanmenu({
       meanScreenWidth: "767"     
-    });    
+    });*/   
 
   // Show current page
 if(location.href.split("/").slice(-1) == ""){
@@ -171,10 +171,10 @@ if(location.href.split("/").slice(-1) == ""){
     });
 
     //WOW js
-     new WOW().init();
+     /*new WOW().init();*/
 
      // Texillate js
-     $('.txt_search').textillate({
+     /*$('.txt_search').textillate({
         loop: true,
         initialDelay:1000
      });
@@ -183,7 +183,7 @@ if(location.href.split("/").slice(-1) == ""){
       })
      $('.txt_error').textillate({    
       loop: true
-     });
+     });*/
 
      //Google Map
       var googleMapSelector = $('#contactgoogleMap'),

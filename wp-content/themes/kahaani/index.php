@@ -18,8 +18,12 @@ get_header();
         <div class="container">
             <div class="row">
             <?php 
-            while(have_posts()){
-                the_post(); ?>
+            $homeStories = new Wp_Query(array(
+                'post_per_page' => 9,
+                'post_type' => 'post'
+                ));
+            while($homeStories->have_posts()){
+                $homeStories->the_post(); ?>
                 <div class="col-md-4 col-sm-6">
                     <article class="blog-post t" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div class="post-img">

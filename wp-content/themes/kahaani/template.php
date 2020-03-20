@@ -33,45 +33,19 @@ if ( function_exists('yoast_breadcrumb') ) {
             <div class="row">
 <div class="col-sm-12">
 <h3>Add New Post</h3>
-<form class="form-horizontal" name="form" method="post" action="http://localhost/mail.php" enctype="multipart/form-data">
+<form class="form-horizontal" name="form" method="post" action="" enctype="multipart/form-data">
 <input type="hidden" name="ispost" value="1" />
 <input type="hidden" name="userid" value="" />
-<div class="row">
-    <div class="col-lg-6">
-    <label class="control-label">Name</label>
-    <input type="text" class="form-control" name="name" />
-    </div>
-    <div class="col-lg-6">
-    <label class="control-label">Phone Number</label>
-    <input type="text" class="form-control" name="phn" />
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-6">
-    <label class="control-label">City</label>
-    <input type="text" class="form-control" name="city" />
-    </div>
-    <div class="col-lg-6">
-    <label class="control-label">State</label>
-    <input type="text" class="form-control" name="state" />
-    </div>
-</div>
-<div class="row">
-<div class="col-lg-6">
-<label class="control-label">Email</label>
-<input type="email" class="form-control" name="email" />
-</div>
-<div class="col-md-12 col-lg-6">
+<div class="col-md-12">
 <label class="control-label">Title</label>
 <input type="text" class="form-control" name="title" />
 </div>
-</div>
-<div class="row">
+
 <div class="col-md-12">
 <label class="control-label">Sample Content</label>
 <textarea class="form-control" rows="8" name="sample_content"></textarea>
 </div>
-</div>
+
 <!--<div class="col-md-12">
 <label class="control-label">Choose Category</label>
 <select name="category" class="form-control">
@@ -85,16 +59,14 @@ echo '<option value="'.$listval->term_id.'">'.$listval->name.'</option>';
 ?>
 </select>
 </div>-->
-<div class="row">
+
 <div class="col-md-12">
 <label class="control-label">Upload Post Image</label>
 <input type="file" name="sample_image" class="form-control" />
 </div>
-</div>
-<div class="row">
+
 <div class="col-md-12">
-<input type="submit" class="post_btn btn btn-primary" value="SUBMIT" name="submitpost" />
-</div>
+<input type="submit" class="btn btn-primary" value="SUBMIT" name="submitpost" />
 </div>
 </form>
 <div class="clearfix"></div>
